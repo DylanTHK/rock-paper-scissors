@@ -17,18 +17,21 @@ function computerSelection() {
     return options[computer];
 }
 
-// function to determine the outcome of the play - playRound
+// function to determine the outcome of a single round
 function playRound(player, computer) {
     // condition for tie
     if (player === computer) {
-        return 
+        return "Draw"
     }
     // condition for win
-    if (player === "Rock" && computer ==="Scissors") {
-        
+    else if ((player === "Rock" && computer === "Scissors") || (player === "Paper" && computer === "Rock") || (player === "Scissors" && computer === "Paper")) {
+        return `${player} beats ${computer}, Player wins this round!`;
     }
 
     // condition for lose
+    else {
+        return `${computer} beats ${player}, Computer wins this round!`;
+    }
 }
 
 // function to manage state of game - game()
@@ -36,3 +39,4 @@ function playRound(player, computer) {
 
 let computer = computerSelection();
 let player = playerSelection();
+let outcome = playRound(player, computer);
