@@ -1,15 +1,4 @@
 
-// function to obtain user's input - playerSelection
-function playerPlay() {
-    let player = prompt("Please choose Rock, Paper or Scissors").toLowerCase();
-    // make input case insensitive
-    let firstLetter = player[0];
-    let capLetter = firstLetter.toUpperCase();
-    let restOfWord = player.slice(1);
-    let chosenOption = capLetter.concat(restOfWord);
-    return chosenOption;
-}
-
 // function to determine the computer's choice - computerPlay, return computerSelection
 function computerPlay() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -57,11 +46,15 @@ function game() {
 
     //condition to determine winner
     if (playerScore > computerScore) {
-        console.log("Player WINS THE GAME!");
+        console.log("Player WINS THE GAME!");  //* add option to reset game
     } else {
         console.log("Computer WINS the GAME!");
     }
 }
 
-// function call to initiate game
-game()
+// Take player's input for R P S
+
+
+
+// insert player's choice into playRound(player, computer)
+

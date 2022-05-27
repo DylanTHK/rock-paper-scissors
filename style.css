@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    justify-content: center;
+    text-align: center;
+}
+
+#head {
+    background-color: blueviolet;
+    padding: 1em;
+    font-size: 5em;
+}
+
+#scores {
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    padding: .1em;
+    font-size: 8em;
+}
+
+#playerScore {
+    padding: 0 1em 0 1em;
+}
+
+#computerScore {
+    padding: 0 1em 0 1em;
+}
+
+#playSpace {
+    display: flex;
+}
+
+#display {
+    padding: 0 1em 0 1em;
+}
+
+#buttons {
+    background-color: chartreuse;
+    padding: 2em;
+}
+
+.button {
+    margin: 0 3em 0 3em;
+}
+
+#rockButton {
+    height: 110px;
+}
