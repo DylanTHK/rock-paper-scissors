@@ -15,13 +15,47 @@
     display: flex;
 }
 
-.liveDisplay {
+#playerSelection, #computerSelection {
     border-style: solid;
     border-radius: .2em;
     margin: 0 3em;
     height: 150px;
     width: 150px;    
 }
+
+.Rock {
+    border-style: solid;
+    border-radius: .2em;
+    margin: 0 3em;
+    height: 150px;
+    width: 150px;
+    background-image: url("images/icons8-hand-rock-100.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.Paper {
+    border-style: solid;
+    border-radius: .2em;
+    margin: 0 3em;
+    height: 150px;
+    width: 150px;
+    background-image: url("images/icons8-hand-100.png"); 
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+.Scissors {
+    border-style: solid;
+    border-radius: .2em;
+    margin: 0 3em;
+    height: 150px;
+    width: 150px;
+    background-image: url("images/icons8-hand-scissors-100.png");  
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 
 #scoreDisplay {
     background-color: aqua;
@@ -63,5 +97,30 @@
 
 #rockButton {
     height: 110px;
+}
+
+#resultsPage {
+    font-size: 3rem;
+    padding: 2rem;
+    font-weight: bold;
+}
+
+#finalScore {
+    font-size: 2rem;
+    padding: 2rem;
+
+}
+
+#reset {
+    font-size: 2rem;
+    padding: .5rem;
+    background-color: rgb(85, 201, 85);
+    border-radius: .3em;
+    font-weight: bold;
+
+}
+
+.hidden {
+    display: none;
 }
 
