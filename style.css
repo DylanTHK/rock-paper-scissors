@@ -30,8 +30,9 @@
     display: flex;
 }
 
-#display {
+.display {
     padding: 0 1em 0 1em;
+    font-size: 2em;
 }
 
 #buttons {
