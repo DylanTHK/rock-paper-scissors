@@ -1,8 +1,7 @@
-// obtain user input
-function playerPlay(e) {
-    // let player = ;
-    return chosenOption;
-}
+let playerScore = 0;
+let computerScore = 0;
+const gameRounds = 5; // determines number of rounds to play
+
 // function to determine the computer's choice - computerPlay, return computerSelection
 function computerPlay() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -11,44 +10,30 @@ function computerPlay() {
 }
 
 // function to determine the outcome of a single round
-function playRound(player, computer) {
+function playRound(player) {
     // condition for tie
+    const computer = computerPlay(); // new computer input each round
     if (player === computer) {
         return "Draw"
     }
-    // condition for win
+    // condition for player win
     else if ((player === "Rock" && computer === "Scissors") || (player === "Paper" && computer === "Rock") || (player === "Scissors" && computer === "Paper")) {
         console.log(`${player} beats ${computer}, You WIN!`);
+        playerScore++;
         return "player";
     }
 
-    // condition for lose
+    // condition for computer win
     else {
         console.log(`${computer} beats ${player}, You LOSE!`);
+        computerScore++;
         return "computer";
     }
 }
 
 // function to manage state of game - game()
-function game() {
-    //play 5 rounds, keep score, report a winner
-    let playerScore = 0;
-    let computerScore = 0;
-    let gameRounds = 5; // determines number of rounds to play
-
-    // loop to keep track of 5 rounds
-    for (let i = 0; i < gameRounds; i++) {
-        const computerSelection = computerPlay(); // new computer input each round
-        const playerSelection = playerPlay(); // new player input each round
-        let outCome = playRound(playerSelection, computerSelection); // to output the verdict of each round
-        if (outCome === "player") {
-            playerScore += 1;
-        } else {
-            computerScore += 1;
-        }
-    }
-
-    //condition to determine winner
+function game(player) {
+    // condition to determine winner
     if (playerScore > computerScore) {
         console.log("Player WINS THE GAME!");  //* add option to reset game
     } else {
@@ -56,11 +41,15 @@ function game() {
     }
 }
 
-// Take player's input for R P S
+// take player's input for R P S
+function initialise() {
+    const playerOption = document.querySelectorAll(".buttonClass"); // returns a nodelist of 3 input nodes
+    // forEach allows for calling of each node in nodelist, playerOption
+    // each nodeElement passed to addEventListener when clicked, passes playRound function
+    // input for selected from nodeElement.target.id (Rock / Paper / Scissors)
+    playerOption.forEach(nodeElement => nodeElement.addEventListener("click", 
+    playerSelection => playRound(playerSelection.target.id)));
+}
 
-window.addEventListener("click", function(e) {
-    console.log(e);
-});
-
-// insert player's choice into playRound(player, computer)
-
+// start of game
+initialise();

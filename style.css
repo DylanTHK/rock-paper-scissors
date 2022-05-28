@@ -48,13 +48,17 @@
     font-size: 2em;
 }
 
-#buttons {
+#buttons { /* for the parent container(buttons) */
     background-color: chartreuse;
-    padding: 2em;
+    padding: 1em;
 }
 
-.button {
+.buttonClass {
     margin: 0 3em;
+}
+
+.buttonClass:hover {
+    transform: scale(1.2);
 }
 
 #rockButton {
