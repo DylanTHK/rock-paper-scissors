@@ -1,4 +1,8 @@
-
+// obtain user input
+function playerPlay(e) {
+    // let player = ;
+    return chosenOption;
+}
 // function to determine the computer's choice - computerPlay, return computerSelection
 function computerPlay() {
     const options = ["Rock", "Paper", "Scissors"];
@@ -54,7 +58,9 @@ function game() {
 
 // Take player's input for R P S
 
-
+window.addEventListener("click", function(e) {
+    console.log(e);
+});
 
 // insert player's choice into playRound(player, computer)
 

@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     justify-content: center;
     text-align: center;
 }
@@ -7,31 +8,43 @@
 #head {
     background-color: blueviolet;
     padding: 1em;
-    font-size: 5em;
+    font-size: 2em;
 }
 
-#scores {
+#selectionDisplay {
+    display: flex;
+}
+
+.liveDisplay {
+    border-style: solid;
+    border-radius: .2em;
+    margin: 0 3em;
+    height: 150px;
+    width: 150px;    
+}
+
+#scoreDisplay {
     background-color: aqua;
     display: flex;
     flex-direction: row;
     padding: .1em;
-    font-size: 8em;
+    font-size: 4em;
 }
 
 #playerScore {
-    padding: 0 1em 0 1em;
+    padding: 0 2em;
 }
 
 #computerScore {
-    padding: 0 1em 0 1em;
+    padding: 0 2em;
 }
 
 #playSpace {
     display: flex;
 }
 
-.display {
-    padding: 0 1em 0 1em;
+.textDisplay {
+    padding: 0 1em;
     font-size: 2em;
 }
 
@@ -41,9 +54,10 @@
 }
 
 .button {
-    margin: 0 3em 0 3em;
+    margin: 0 3em;
 }
 
 #rockButton {
     height: 110px;
 }
+

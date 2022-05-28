@@ -9,19 +9,27 @@
 </head>
 <body>
     <h1 id="head">Welcome to Rock Paper Scissors!</h1>
-    <h2 id="scores">
-        <div id="playerScore">0</div>
-        <div id="computerScore">0</div>
-    </h2>
-    <h3 id="playSpace">
-        <div class= "display" id="left">Player</div>
-        <div class= "display" id="middle">vs</div>
-        <div class= "display" id="right">Computer</div>
-    </h3>
+    <div id="liveDisplay">
+        <div id="selectionDisplay">
+            <div class="liveDisplay" id="playerSelection"></div>
+            <div class="liveDisplay" id="computerSelection"></div>
+        </div>
+        <h2 id="scoreDisplay">
+            <div id="playerScore">0</div>
+            <div id="computerScore">0</div>
+        </h2>
+        <h3 id="playSpace">
+            <div class="textDisplay" id="left">Player</div>
+            <div class="textDisplay" id="middle">vs</div>
+            <div class="textDisplay" id="right">Computer</div>
+        </h3>
+        <h3 id="roundDisplay">Select one to start</h3>
+
+    </div>
     <div id="buttons">
-        <input class= "button" id="rockButton" type="image" src="images/icons8-hand-rock-100.png">
-        <input class= "button" id="paperButton" type="image" src="images/icons8-hand-100.png">
-        <input class= "button" id="scissorsButton" type="image" src="images/icons8-hand-scissors-100.png">        
+        <input class="button" id="rockButton" type="image" src="images/icons8-hand-rock-100.png">
+        <input class="button" id="paperButton" type="image" src="images/icons8-hand-100.png">
+        <input class="button" id="scissorsButton" type="image" src="images/icons8-hand-scissors-100.png">        
     </div>
 
     <script src="game-logic.js"></script>
