@@ -1,7 +1,7 @@
 let playerScore = 0;
 let computerScore = 0;
 let roundCounter = 0;
-let roundsToWin = 1; // set first to _ wins the game!
+let roundsToWin = 3; // set first to _ wins the game!
 
 // function to determine the computer's choice - computerPlay, return computerSelection
 function computerPlay() {
